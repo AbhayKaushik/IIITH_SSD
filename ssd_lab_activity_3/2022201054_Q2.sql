@@ -1,0 +1,1 @@
+SELECT CONCAT(Fname,' ',Minit,' ',Lname),Ssn,D.Dnumber,A.Count FROM EMPLOYEE E INNER JOIN (SELECT count(*) Count, Super_ssn FROM EMPLOYEE GROUP BY Super_ssn) A ON E.Ssn = A.Super_ssn INNER JOIN DEPARTMENT D ON E.Ssn = D.Mgr_ssn ORDER BY Count;

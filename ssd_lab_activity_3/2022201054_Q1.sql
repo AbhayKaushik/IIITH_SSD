@@ -1,0 +1,1 @@
+SELECT CONCAT(Fname,' ',Minit,' ',Lname),Ssn,Dnumber,Dname FROM EMPLOYEE E INNER JOIN DEPARTMENT D ON E.Ssn = D.Mgr_Ssn WHERE Ssn in (SELECT Super_Ssn FROM EMPLOYEE WHERE Ssn IN (SELECT Essn FROM WORKS_ON GROUP BY Essn HAVING sum(Hours) < 40));
