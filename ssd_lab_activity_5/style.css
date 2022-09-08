@@ -1,0 +1,57 @@
+/* * - universal selector */
+/* h1 - element selector  */
+/* # - id selector  */
+/* . - class selector  */
+
+/* *{ */
+/*   color: "red"; */
+/* } */
+
+body {
+  /* text-align: center; */
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  animation: bgtransition 5s linear 2s infinite alternate;
+}
+
+#login-div {
+  /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  */ 
+  /* animation: bgtransition 5s linear 2s infinite alternate; */
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(196,162,162,1) 50%); 
+  border-radius: 20px;
+  text-align: center;
+  color: red;
+  /* background: rgb(131,58,180); */
+  margin: 100px 30% 150px;
+  padding: 100px ; /* (top,down) , (left,right)*/
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.label {
+  text-align: left;
+  color: green;
+}
+
+input {
+  color: green;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 30px 10px; /*top (left,right) down*/
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+@keyframes bgtransition {
+  /* from {background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);} , */
+  /* to {background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);} */
+  from {background-color: red;},  /*linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);}*/
+  to {background-color: yellow;} /*linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);}*/ 
+}
+
+h1{
+  text-align:center;
+}

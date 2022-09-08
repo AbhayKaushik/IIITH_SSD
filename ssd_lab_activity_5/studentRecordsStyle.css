@@ -1,0 +1,65 @@
+
+/* * { */
+/*   /* background-size: cover; */ */
+/*   /* background-repeat: no-repeat; */ */
+/*   /*  */ */
+/*   background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(196,162,162,1) 100%); */
+/* } */
+
+body {
+  /* background: rgb(131,58,180); */
+  /* overflow: scroll; */
+  font-family: arial;
+  font: arial;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  text-align: center;
+  /* margin: 10px 20%; */
+  /* background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(196,162,162,1) 100%);  */
+  /* background: ; */ 
+}
+
+input {
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+table {
+  padding: 5% 20%;
+}
+
+table.center {
+  margin-left: 100px; 
+  margin-right: 100px;
+}
+
+td{
+  text-align: center;
+  border: 1px solid #000;
+  /* margin: 5%; */
+  padding: 5px 180px;
+}
+
+button {
+  padding: 5px 30px 5px; /*top (left,right) down*/
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+#table-head {
+  background: #1cb7e2;
+}
+
+.val-row:nth-child(even){
+  background: #3c66a2;
+}
+.val-row:nth-child(odd){
+  background: #11f702;
+}
+
