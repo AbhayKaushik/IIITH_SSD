@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Hello World!</title>
+
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  
+  </head>
+  <body>
+<!--      <form name="myForm" onsubmit="return validateForm()"> -->
+     <form name="myForm" onsubmit="validateForm();">
+       Manager Name: <input type="text" name="mname" required><br>
+<!--        1. This is required field, signifies Manager’s name. -->
+       Group Email: <input type="text" name="gemail" required><br>
+
+<!--        1. This is required field, signifies Team’s email.
+       2. Must have validation check for email pattern.
+        -->
+       Server Username: <input type="text" name="sname" required onkeyup="checkUsername()"><span id = "usrcheck"></span><br>
+       
+<!--        1. This is required field, signifies username of the assigned server.
+       2. Must have validation checks for at least one Uppercase and at
+       least one Numeric character. For example ‘User1’.
+       3. The validation must happen as the user types the value. Rather on
+       every key stroke the check must happen.
+        4. Show an error message ‘Invalid Username’ besides input field, if
+        the field is invalid. Should disappear if field has valid entry.
+ -->
+       Server Password: <input type="password" name="spwd"><br>
+<!-- 1. This field is required and provide space for entering password. -->
+       Confirm Password: <input type="password" name="cspwd" onblur="matchPassword()"><span id = "pwdcheck"></span><br>
+
+<!--        1. This field is required and will be used for cross verifying the
+entered password.
+      2. The validation must happen the moment user finishes typing or
+      rather the moment field loses its focus. -->
+       <label for="tleads">Team Lead: </label>
+                    <select name="tleads" id="tleads">
+                      <option value="ABCD">ABCD</option>
+                      <option value="EFGH">EFGH</option>
+                      <option value="IJKL">IJKL</option>
+                      <option value="MNOP">MNOP</option>
+                    </select>
+       <br>
+<!--       1. This is required field and will be a dropdown field. -->
+       Team Members: 
+       
+       <div id ="memlist">
+         
+         <div class = "dropsource" id ="left" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)">
+           <p class = "mem-panel" id="ch1" draggable ondragstart="dragStartHandler(event)">ABCD</p><br>
+           <p class = "mem-panel" id="ch2" draggable ondragstart="dragStartHandler(event)">EFGH</p><br>
+           <p class = "mem-panel" id="ch3" draggable ondragstart="dragStartHandler(event)">IJKL</p><br>
+           <p class = "mem-panel" id="ch4" draggable ondragstart="dragStartHandler(event)">MNOP</p><br>
+         </div>
+
+        <div class = "dropsource" id ="right" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)">
+           <p class = "mem-panel" draggable ondragstart="dragStartHandler(event)">ABCD</p><br>
+           <p class = "mem-panel" draggable ondragstart="dragStartHandler(event)">EFGH</p><br>
+           <p class = "mem-panel" draggable ondragstart="dragStartHandler(event)">IJKL</p><br>
+           <p class = "mem-panel" draggable ondragstart="dragStartHandler(event)">MNOP</p><br>
+         </div>
+
+<!--          <div class = "dropdest">
+           
+         </div>
+         
+         
+         <div id ="left">
+           <div class = "mem-panel" draggable>ABCD</div><br>
+           <div class = "mem-panel" draggable>EFGH</div><br>
+           <div class = "mem-panel" draggable>IJKL</div><br>
+           <div class = "mem-panel" draggable>MNOP</div><br>
+           
+         </div>
+         
+         <div id ="right">
+           <div class = "mem-panel" ></div><br>
+           <div class = "mem-panel" ></div><br>
+           <div class = "mem-panel" ></div><br>
+           <div class = "mem-panel" ></div><br>
+         </div>
+          -->
+       </div><br>
+       
+<!--       1. This is a custom form element. This is a picklist component, where
+      values are dragged and dropped from one section to another.
+      2. This is an optional field. -->
+       <br><input type="submit" value="Submit" onclick = "validateForm()"><br>
+<!--        1. On clicking this button, the form should get submitted only if it is
+       valid.
+       2. On submitted, show the entered data on the Alert popup, as per
+       the below format: -->
+      
+    </form> 
+    
+  </body>
+</html>
